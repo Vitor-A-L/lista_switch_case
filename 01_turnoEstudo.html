@@ -13,11 +13,23 @@
     */
 
     //ENTRADA
-    
-    
-    //PROCESSAMENTO
+    const turno = prompt("Qual é o seu turno(M-matutino ou V-Vespertino ou N- Noturno)").toUpperCase;
 
-    
+    //PROCESSAMENTO
+    switch (turno) {
+        case "M":
+            alert(`Bom Dia!`);
+            break;
+        case "V":
+            alert(`Boa Tarde!`);
+            break;
+        case "N":
+            alert(`Boa Noite!`);
+        default:
+            alert(`Valor Inválido!`);
+            break;
+    }
+
     //SAÍDA
 
 </script>

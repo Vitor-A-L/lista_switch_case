@@ -6,11 +6,27 @@
     */
 
     //ENTRADA
+    const number = Number(prompt("Escreva um número"));
 
-    
     //PROCESSAMENTO
+    switch (Number.isInteger(number)) {
+        case true:
+            switch (number % 2 === 0) {
+                case true:
+                    alert(`Par`);
+                    break;
 
-    
+                default:
+                    alert(`Ímpar`)
+                    break;
+            }
+            break;
+        default:
+            alert(`Valor invalido`)
+            break;
+    }
+
+
     //SAÍDA
 
 </script>
