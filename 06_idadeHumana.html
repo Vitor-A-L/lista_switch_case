@@ -10,11 +10,24 @@
     */
 
     // ENTRADA
-const
-    
-    // PROCESSAMENTO
+    const idade = prompt("Qual é a idade do seu cão?");
+    const porte = prompt("Qual é o porte do seu cão(médio,pequeno ou grande)?");
 
-    
+    // PROCESSAMENTO
+    switch (porte) {
+        case "pequeno":
+            total = idade * 5;
+            break;
+        case "médio":
+            toal = idade * 6;
+        case "grande":
+            total = idade * 7;
+            break;
+        default:
+            alert(`Valor invalido`);
+            break;
+    }
+    alert(`À idade do seu cão em anos humanos é ${total}`);
     // SAÍDA
 
 </script>

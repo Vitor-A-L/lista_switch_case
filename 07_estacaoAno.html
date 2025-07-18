@@ -7,10 +7,56 @@
     */
 
     //ENTRADA
-const
-    
-    //PROCESSAMENTO
+    const hemisfério = prompt("Em qual hemisfério você está?(Norte,Sul)").toUpperCase();
+    const mês = prompt("Qual é o mês?(Em extenso)").toUpperCase();
 
+    const estacao = hemisfério + " " + mês
+    //PROCESSAMENTO
+    switch (estacao) {
+        case "NORTE DEZEMBRO":
+        case "NORTE JANEIRO":
+        case "NORTE FEVEREIRO":
+            alert(`Você está no inverno`);
+            break;
+        case "SUL DEZEMBRO":
+        case "SUL JANEIRO":
+        case "SUL FEVEREIRO":
+            alert(`Você está no verão`);
+            break;
+        case "NORTE MARÇO":
+        case "NORTE MAIO":
+        case "NORTE ABRIL":
+            alert(`Você está na primaveira`);
+            break;
+        case "SUL MARÇO":
+        case "SUL MAIO":
+        case "SUL ABRIL":
+            alert(`Você está no outono`);
+            break;
+        case "NORTE JUNHO":
+        case "NORTE JULHO":
+        case "NORTE AGOSTO":
+            alert(`Você está no verão`);
+            break;
+        case "SUL JUNHO":
+        case "SUL JULHO":
+        case "SUL AGOSTO":
+            alert(`Você está no inverno`);
+            break;
+        case "NORTE MARÇO":
+        case "NORTE OUTUBRO":
+        case "NORTE NOVEMBRO":
+            alert(`Você está na outono`);
+            break;
+        case "SUL MARÇO":
+        case "SUL OUTUBRO":
+        case "SUL NOVEMBRO":
+            alert(`Você está na primavera`);
+            break;
+        default:
+            alert(`Invalido`);
+            break;
+    }
 
     //SAÍDA
 
