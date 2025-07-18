@@ -14,24 +14,28 @@
     */
 
     //ENTRADA
-const telefone = prompt("Telefonou para a vítima?(Responda com Sim ou Não)").toUpperCase();
-const local = prompt("Esteve no local do crime?(Responda com Sim ou Não)").toUpperCase();
-const mora = prompt("Mora perto da vítima?(Responda com Sim ou Não)").toUpperCase();
-const devia = prompt ("Devia para a vítima?(Responda com Sim ou Não)").toUpperCase();
-const trabalhou = prompt("Já trabalhou com a vítima?(Responda com Sim ou Não)").toUpperCase();
-    
-let pontos = 0;
+    let telefone = prompt("Telefonou para a vítima?(sim ou não)") === "sim" ? 1 : 0;
+    let local = prompt("Esteve no local do crime?(sim ou não)") === "sim" ? 1 : 0;
+    let mora = prompt("Mora perto da vítima?(sim ou não)") === "sim" ? 1 : 0;
+    let devia = prompt("Devia para a vítima?(sim ou não)") === "sim" ? 1 : 0;
+    let trabalhou = prompt("Já trabalhou com a vítima?(sim ou não)") === "sim" ? 1 : 0;
 
+    const classificação = telefone + local + mora + devia + trabalhou
     //PROCESSAMENTO
-switch (telefone && local && mora && devia && trabalhou) {
-    case "SIM":
-        pontos + 1
-        break;
-    default:
-        break;
-}
-alert(${pontos});
 
+    switch (classificação) {
+        case 5:
+            alert(`Você é o assasino`);
+            break;
+        case 3:
+        case 4:
+            alert(`Você é cúmplice`);
+            break;
+        case 2:
+            alert(`Você é suspeito`);
+        default:
+            alert(`Inocente`);
+            break;
+    }
     //SAÍDA
-
 </script>

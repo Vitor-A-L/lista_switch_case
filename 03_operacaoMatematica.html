@@ -11,28 +11,56 @@
     */
 
     //ENTRADA
-let primeirovalor = Number(prompt("Digite o primeiro número"));
-let segundovalor = Number(prompt("Digite o segundo número"));
-const operaçao = prompt("Qual operação você quer realizar (+ = adição, - = subtração, * = multiplicasão)");
+    let primeirovalor = Number(prompt("Digite o primeiro número"));
+    let segundovalor = Number(prompt("Digite o segundo número"));
+    const operacao = prompt("Qual operação você quer realizar (+ = adição, - = subtração, * = multiplicasão)");
     //PROCESSAMENTO
-switch (operaçao) {
-    case "+":
-        valor = primeirovalor + segundovalor;
-        alert(`O valor é ${valor}`);
-        
-        break;
+    let total
+    switch (operacao) {
+        case "+":
+            total = primeirovalor + segundovalor;
+            alert(`O valor é ${total}`);
+            break;
         case "-":
-            valor = primeirovalor - segundovalor;
-            alert(`O valor é ${valor}`);
-        break;
+            total = primeirovalor - segundovalor;
+            alert(`O valor é ${total}`);
+            break;
         case "*":
-            valor = primeirovalor * segundovalor
-            alert(`O valor é ${valor}`);
-    default:
-        alert(`Número inválido`)
-        break;
-}
-    
+            total = primeirovalor * segundovalor;
+            alert(`O valor é ${total}`);
+            break;
+        default:
+            alert(`Valor invalido`);
+            break;
+    }
+    if (Number.isInteger(total)) {
+        switch (true) {
+            case total % 2 === 0:
+                alert(`Par`);
+                break;
+            case total % 2 !== 0:
+                alert(`Ímpar`);
+                break;
+        }
+    }
+
+    switch (true) {
+        case total > 0:
+            alert(`Seu número é positivo`);
+            break;
+        default:
+            alert(`Seu número é negativo`);
+            break;
+    }
+    switch (total % 1 === 0) {
+        case true:
+            alert(`Inteiro`);
+            break;
+
+        default:
+            alert(`decimal`);
+            break;
+    }
     //SAÍDA
 
 </script>
